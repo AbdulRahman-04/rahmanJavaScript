@@ -1,4 +1,4 @@
-Recursion and hoisting:
+// Recursion and hoisting:
 
 // recursion:
 
