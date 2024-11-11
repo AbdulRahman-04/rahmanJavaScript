@@ -1,4 +1,4 @@
-et flipkartUser = {
+let flipkartUser = {
     name: "abdul rahman",
     PhoneNo: 8186978069,
     userId: "2219A7E",
