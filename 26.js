@@ -35,3 +35,4 @@ console.log(myArray);
 // myArray[5] = "5th index value";
 // myArray[6] = "6th index value";
 // console.log(myArray);
+
