@@ -1,130 +1,90 @@
+// JS epoch time: 
 
-// AND (&&) Operato:
+/* epoch time represents the number of milliseconds that have elapsed since january 1 1970, 00:00:00 UTC, 
+commonly referred to as the unix epoch. 
 
-//in this operator if any one condition is false the o/p woud be false and if both the condition is true
-// then the o/p would be true.
+js uses milliseconds to represent epoch time
 
-// let a = true;
-// let b = false;
+Getting the current epoch time: 
+js provides multiple ways to get the current epoch time.
 
-// console.log(a && b);  
-// console.log(b && a);
-// console.log(b && b);
-// console.log(a && a);
+there are ways of creating a date:
+1. new Date()
+2. new Date(milliseconds)
+3. new Date(date in string)
+4. new Date(year, month, day, hour, minute, seconds, milliseconds)
 
+*/
 
-// let a = true ;
-// let b = false;
+let date = new Date();
+console.log(date);
 
-// console.log(a && b);
-// console.log(b && a);
-// console.log(b && b);
-// console.log(a && a);
+let date1 = new Date(1731994564702);
+console.log(date1);
 
-// let a = true;
-// let b = false;
+let date2 = new Date("11 may 2016");
+console.log(date2);
 
-// console.log(a && b);
-// console.log(b && a);
-// console.log(b && b);
-// console.log(a && a);
-
-
-// let a = false;
-// let b = true;
-
-// console.log(a && b);
-// console.log(b && a);
-// console.log(a && a );
-// console.log(b && b);
+let date4 = new Date(2017, 10, 20, 11, 50, 50, 50);
+console.log(date4);
 
 
-// let a = true;
-// let b = false;
+// converting date into MilliSeconds:
 
-// console.log(a && b);
-// console.log(b && a);
-// console.log(b && b);
-// console.log(a && a);
+let c = Date.parse(new Date());
+console.log(c);
 
-
-// OR operator(||): if any one condition is true the o/p would be true and if both the condition are false 
-//                   the o/p would be false.
-
-// let a = true;
-// let b = false;
-
-// console.log(a || b);
-// console.log(b || a);
-// console.log(b || b);
-// console.log(a || a);
-
-// console.log(a || b);
-// console.log(b || a);
-// console.log(b || b);
-// console.log(a || a);
-
-// console.log(a || b);
-// console.log(b || a);
-// console.log(b || b);
-// console.log(a || a);
+let d = Date.parse(new Date());
+console.log(d);
 
 
-// console.log(a || b);
-// console.log(b || a);
-// console.log(b || b);
-// console.log(a || a);
+// or 
 
-// console.log(a || b);
-// console.log(b || a);
-// console.log(b || b);
-// console.log(a || a);
+let j = Date.parse('sat feb 11 2023 11:20:23 GMT+0000(coordinated universal time');
+console.log(j);
 
 
-// NOT(!) Operator: not operator makes a true condition false and false condition true.
+// converting to Any standard time zone
 
-// True ===> False
-// False ===> True
+let indDate = new Date().toLocaleString("en-IN", {timeZone: "Asia/Kolkata",});
+console.log(indDate);
+// OR
 
-// NOT  !
-// let c = false;
-// console.log(!c); // true
+let date5 = new Date().toLocaleString("en-US", {
 
-// let a = false
-// console.log(!(a));
+    timeZone: "Asia/Kolkata",
+    month:"numeric",
+    day: "2-digit",
+    year:"numeric",
+    weekday: "long",
+    hour: "2-digit",
+    minute: "numeric",
+    second: "2-digit",
+    dayPeriod: "long"
+     
 
-// let a = true;
-// console.log(!(a));
+} )
 
-// let a = false;
-// console.log(!(a));
-
-// let a = false;
-// console.log(!(a));
-
-
-// let a = true;
-// console.log(!(a));
+console.log(date5);
 
 
 
 
 
 
+let date6 = new Date().toLocaleString("en-US", {
 
+    timeZone: "Asia/Kolkata",
+    month:"numeric",
+    day: "numeric",
+    year:"2-digit",
+    weekday: "short",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "numeric",
+    dayPeriod: "short"
+     
 
+} )
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(date6);
